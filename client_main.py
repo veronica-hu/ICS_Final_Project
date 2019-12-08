@@ -2,7 +2,7 @@ import chat_client_class as chatClient
 from tkinter import messagebox
 import Login
 import Main
-import Register
+from register_GUI import Register
 from chat_utils import *
 import argparse
 import json
