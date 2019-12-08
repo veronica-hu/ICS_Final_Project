@@ -10,8 +10,11 @@ import tkinter.messagebox as mbox
 
 
 class Register_UI(tk.Frame):
-    def __init__(self, master = None):
+    def __init__(self, quit_func, reg_func, close_callback, master = None):
         tk.Frame.__init__(self, master)
+        self.quit_func = quit_func
+        self.reg_func = reg_func
+        self.close_callback = close_callback
         self.createWidgets()
         
 # create Widgets
