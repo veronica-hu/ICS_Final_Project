@@ -11,7 +11,6 @@ import tkinter.messagebox as mbox
 #
 import Login
 import chat_client_class as chatClient
-import argparse
 import client_main_modified
 #
 
