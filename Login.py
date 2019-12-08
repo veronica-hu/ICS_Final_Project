@@ -15,6 +15,7 @@ class LoginPanel:
     def show(self):
         self.login_frame = Tk()
         self.login_frame.configure(background = "#333333")#原：#333333
+        
         self.login_frame.protocol("WM_DELETE_WINDOW", self.close_callback)
         
         #窗口尺寸待修改
