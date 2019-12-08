@@ -82,7 +82,8 @@ class Client:
                 return False
         else:               # fix: dup is only one of the reasons
            return(False)
-
+    #self-defined function:check_user&register_user
+    #=======================================
     def check_user(self, user, key):
         msg = json.dumps({'action':'login', 'name': user, 'password': key})
         self.send(msg)
@@ -102,7 +103,7 @@ class Client:
             return '1'
         elif response['status'] == 'ok':
             return '0'
-
+#==============================================
     def read_input(self):
         while True:
             text = sys.stdin.readline()[:-1]
