@@ -8,10 +8,9 @@ Created on Sat Dec  7 14:37:31 2019
 import tkinter as tk
 import tkinter.messagebox as mbox
 
-#
+#======test-use import=========
 import Login
-import client_main
-#
+#======test-use import=========
 
 class Register_UI(tk.Frame):
     def __init__(self, quit_func, reg_func, close_callback, master = None):
