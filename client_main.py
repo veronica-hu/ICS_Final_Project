@@ -2,7 +2,7 @@ import chat_client_class as chatClient
 from tkinter import messagebox
 import Login
 import Main
-from register_GUI import Register
+import register_GUI as Register
 from chat_utils import *
 import argparse
 import json
@@ -18,7 +18,6 @@ def send_message():
         print("empty message")
         return
     print(content)
-    
     main_window.clear_send_text()
     client.send_message(content)
 
