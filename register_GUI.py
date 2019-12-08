@@ -7,20 +7,14 @@ Created on Sat Dec  7 14:37:31 2019
 
 import tkinter as tk
 import tkinter.messagebox as mbox
-#from PIL import ImageTk, Image
 
-# 定义MainUI类表示应用/窗口，继承Frame类
+
 class Register_UI(tk.Frame):
-# Application构造函数，master为窗口的父控件
     def __init__(self, master = None):
-# 初始化Application的Frame部分 
         tk.Frame.__init__(self, master)
-        #self.grid()
-# 创建控件
         self.createWidgets()
         
-
-# 创建控件
+# create Widgets
     def createWidgets(self):      
         self.photo = tk.PhotoImage(file="test2.png")
         self.Artwork = tk.Label(self.master, image=self.photo)
@@ -72,15 +66,13 @@ def show():
     root = tk.Tk()
     root.geometry("800x600")
     root.title('New user: welcome to ICS chat system!')
-# 创建一个MainUI对象
 
-#mycolor = '#%02x%02x%02x' % (255, 0, 238)
     app = Register_UI(root)
-# 设置窗口标题
+# set window title
     app.master.title('New user: welcome to ICS chat system!')
-# 设置窗体大小
+# set the size of window
     app.master.geometry('600x600')
-# 主循环开始
+# start mainloop()
     root.config(background = "#FFC0CB")
     root.mainloop()
 
