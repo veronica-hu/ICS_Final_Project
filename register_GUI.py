@@ -77,7 +77,7 @@ class Register_UI(tk.Frame):
 
     def show(self):
         self.master.mainloop()
-#========================================
+#===testing code, if no need, just delete it========================================
 def close_reg_window():
     reg_window.close()
     global login_window
@@ -97,7 +97,7 @@ def register_submit():
 
 reg_window = Register_UI(close_reg_window, register_submit, close_reg_window)
 reg_window.show()
-#========================================
+#======end of test code==================================
 #GUI
 #Function 1: @
 #Function 2:表情
