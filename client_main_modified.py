@@ -11,6 +11,19 @@ import time
 
 
 #  chatting模式， 需要重写
+def send_message():
+    print("send message:")
+    content = Main.main_window.get_send_text()
+    if content == "" or content == "\n":
+        print("empty message")
+        return
+    print(content)
+    
+    Main.main_window.clear_send_text()
+    client.send_message(content)
+    
+    
+# start    
 def start():
     global client
     # 从chat_cmdl_client搬来的, 为了args （argument）
@@ -26,16 +39,6 @@ def start():
     login_window = Login.LoginPanel(login, register, close_login_window)
     login_window.show()
 
-def send_message():
-    print("send message:")
-    content = Main.main_window.get_send_text()
-    if content == "" or content == "\n":
-        print("empty message")
-        return
-    print(content)
-    
-    Main.main_window.clear_send_text()
-    client.send_message(content)
 
 def close_sk():
     print("trying to disconnect socket")
