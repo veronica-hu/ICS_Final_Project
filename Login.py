@@ -70,7 +70,7 @@ class LoginPanel:
 '''
 a = LoginPanel()
 a.show()
-''''
+'''
 
 
 
