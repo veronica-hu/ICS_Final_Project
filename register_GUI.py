@@ -22,7 +22,18 @@ class Register_UI(tk.Frame):
         self.reg_func = reg_func
         self.close_callback = close_callback
         self.master.title('New user: welcome to ICS chat system!')
-        self.master.geometry('500x400')
+        #self.master.geometry('500x400')
+        
+        #######Rebecca: 这样写可以使窗口出现在屏幕正中间！########
+        screen_width = self.master.winfo_screenwidth()
+        screen_height = self.master.winfo_screenheight()
+        width = 500
+        height = 400
+        gm_str = "%dx%d+%d+%d" % (width, height, (screen_width - width) / 2,
+                                  (screen_height - 1.2 * height) / 2)
+        self.master.geometry(gm_str)
+        #####################################################
+        
         self.master.config(background = "#696969")
 
         self.createWidgets()
