@@ -30,16 +30,23 @@ class LoginPanel:
         self.login_frame.title("Login")
         self.login_frame.resizable(width=False, height=False)
 
-        title_lable = Label(self.login_frame, text="ICS Chat - LogIn", font=("Helvetica", 16),
+        title_lable = Label(self.login_frame, text="ICS Chat - LogIn", font=("Calibri", 16),
                             fg="white", bg="#555555")
         title_lable.pack(ipady = 10, fill = X)
         
         #登陆表单frame
         form_frame = Frame(self.login_frame,bg = '#222222')#原：#222222
-        form_frame.pack(fill=X, padx=20, pady=10)                   
+        form_frame.pack(fill=X, padx=20, pady=10)
+        user_img = PhotoImage(file="user.png", master=self.login_frame)
+        key_img = PhotoImage(file="key.png", master=self.login_frame)
+        user_img_label = Label(form_frame, image=user_img, width=30, height=30, bg="#333333")
+        key_img_label = Label(form_frame, image=key_img, width=30, height=30, bg="#333333")
+        user_img_label.grid(row=0, column=0, padx=5)
+        key_img_label.grid(row=1, column=0, padx=5)
+
         
-        Label(form_frame, text="User：", font=("Helvetica", 12), bg="#222222", fg="white", width = 10, height = 3).grid(row=0, column=1, pady=20) #原： bg="#222222",fg="white"          
-        Label(form_frame, text="Password：", font=("Helvetica", 12), bg="#222222", fg="white", width = 10, height = 3).grid(row=1, column=1, pady=20)
+        Label(form_frame, text="User：", font=("Calibri", 12), bg="#222222", fg="white", width = 10, height = 3).grid(row=0, column=1, pady=20) #原： bg="#222222",fg="white"          
+        Label(form_frame, text="Password：", font=("Calibri", 12), bg="#222222", fg="white", width = 10, height = 3).grid(row=1, column=1, pady=20)
             
         self.user = StringVar()
         self.key = StringVar()
@@ -51,9 +58,9 @@ class LoginPanel:
         btn_frame = Frame(self.login_frame, bg = '#333333')
         btn_frame.pack(fill=X, padx=20, pady=20)
         self.btn_login = Button(btn_frame, text="Log in", bg="lightgreen", fg="black", width=15,
-                              font=('Helvetica', 11), command=self.login_func).pack(side=LEFT, ipady=3)
+                              font=('Calibri', 11), command=self.login_func).pack(side=LEFT, ipady=3)
         self.btn_reg = Button(btn_frame, text = 'Sign up',bg = 'lightgreen',fg = 'black',width = 15,
-                              font = ('Helvetica',11), command = self.reg_func).pack(side=RIGHT, ipady=3)
+                              font = ('Calibri',11), command = self.reg_func).pack(side=RIGHT, ipady=3)
        
         self.login_frame.mainloop()
     
