@@ -20,7 +20,7 @@ Chat system + GUI (tkinter):
 #### Login Window
 <img src="https://github.com/veronica-hu/icspro-img/blob/master/login0.png" width="500">
 
-If you are a new client, click register and go to register window; if you already have an account, log in and go to main window.
+If you are a new client, click ‘sign up' and go to register window; if you already have an account, log in and go to main window.
 
 #### Register Window
 <img src="https://github.com/veronica-hu/icspro-img/blob/master/register0.png" width="500">
