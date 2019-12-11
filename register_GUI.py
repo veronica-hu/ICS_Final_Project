@@ -41,10 +41,10 @@ class Register_UI(tk.Frame):
         self.Artwork2.pack()
         #picture at the top
         '''
-        self.Label_psw_requirement = tk.Label(self.master, text = "Note: The length of password should be at least 6!", font=('Helvetica', 12))
-        self.Label_name = tk.Label(self.master,text="Username:", font=('Helvetica', 12))
-        self.Label_psw = tk.Label(self.master, text = "Password:", font=('Helvetica', 12))
-        self.Label_psw_confirm = tk.Label(self.master, text = "Confirm your password:", font=('Helvetica', 12))
+        self.Label_psw_requirement = tk.Label(self.master, text = "Note: The length of password should be at least 6!")
+        self.Label_name = tk.Label(self.master,text="Username:")
+        self.Label_psw = tk.Label(self.master, text = "Password:")
+        self.Label_psw_confirm = tk.Label(self.master, text = "Confirm your password:")
         #labels representing username, password, password confirmation
         
         default = ''
@@ -53,7 +53,7 @@ class Register_UI(tk.Frame):
         self.entry_psw_confirm = tk.Entry(self.master, show = "*", textvariable = default)
         #text entries of username, password, password confirmation
         
-        self.clickButton_fine = tk.Button(self.master, text = "Submit", font=('Helvetica', 12), command = self.finish)
+        self.clickButton_fine = tk.Button(self.master, text = "Submit", command = self.finish)
         #submission button
         self.Label_psw_requirement.place(x = 53, y = 160, width = 400, height = 30)
         self.Label_name.place(x = 50, y = 200, width = 100, height = 30)        
