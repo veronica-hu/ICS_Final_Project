@@ -68,6 +68,8 @@ class Register_UI(tk.Frame):
             mbox.showinfo("Failure","The username can't be empty, please try again!")
         elif self.entry_psw.get() == '':
             mbox.showinfo("Failure", "The password can't be empty, please try again!")
+        elif len(self.entry_psw.get()) < 6:
+            mbox.showinfo("Failure", "The length of password should be at least 6, please try again!")
         else:
             self.reg_func()
         
