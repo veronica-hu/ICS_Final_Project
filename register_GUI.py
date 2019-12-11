@@ -29,18 +29,12 @@ class Register_UI(tk.Frame):
         
 # create Widgets
     def createWidgets(self):      
-        '''
-        self.photo = tk.PhotoImage(file="p1-photo title 12 LcdD.png")
-        self.Artwork1 = tk.Label(self.master, image=self.photo)
-        self.Artwork1.photo = self.photo
-        self.Artwork1.pack()
-        
-        self.photo = tk.PhotoImage(file="p2-photo title 12 LcdD.png")
-        self.Artwork2 = tk.Label(self.master, image=self.photo)
-        self.Artwork2.photo = self.photo
-        self.Artwork2.pack()
-        #picture at the top
-        '''
+
+        self.photo = tk.PhotoImage(file="reg_title.png")
+        self.Artwork = tk.Label(self.master, image=self.photo)
+        self.Artwork.photo = self.photo
+        self.Artwork.pack()
+       
         self.Label_psw_requirement = tk.Label(self.master, text = "Note: The length of password should be at least 6!")
         self.Label_name = tk.Label(self.master,text="Username:")
         self.Label_psw = tk.Label(self.master, text = "Password:")
