@@ -28,7 +28,7 @@ If you are a new client, click register and go to register window; if you alread
 Once register successfully, you will go back to login window and log in as a registered account.
 
 #### Main Window
-<img src="https://github.com/veronica-hu/icspro-img/blob/master/main.png" width="500">
+<img src="https://github.com/veronica-hu/icspro-img/blob/master/main.png" width="700">
 
 Click the function buttons on the left function side for your needs.
 (The left corner side will show clients' list in the chat system, once you click who button.)
