@@ -23,7 +23,7 @@ class Register_UI(tk.Frame):
         self.close_callback = close_callback
         self.master.title('New user: welcome to ICS chat system!')
         self.master.geometry('500x400')
-        self.master.config(background = "#FFC0CB")
+        self.master.config(background = "#696969")
 
         self.createWidgets()
         
@@ -97,20 +97,8 @@ def register_submit():
         close_reg_window()
     elif result == "1":
         mbox.showerror("Error", "This username is registered.")
-
-reg_window = Register_UI(close_reg_window, register_submit, close_reg_window)
-reg_window.show()
-#======end of test code==================================
-#GUI
-#Function 1: @
-#Function 2:表情
-#Function 3:登录注册
-#Function 4:上传&下载文件
-#Function 5:字体？颜色？
-#Function 6:聊天背景
-#(Function 7:种树)
-
-#Funtion 1: @
-#1. user type "@someone"
-#2. user send a message of notifying someone especially
-#3. socket received the message, and then send everyone with the message, and when it comes to "someone", the system adds "someone @ you" at the front
+#=============================test code========================================
+if __name__ == "__main__":
+    reg_window = Register_UI(close_reg_window, register_submit, close_reg_window)
+    reg_window.show()
+#============================end of test code==================================
