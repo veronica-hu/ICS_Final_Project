@@ -30,12 +30,18 @@ class Register_UI(tk.Frame):
 # create Widgets
     def createWidgets(self):      
         '''
-        self.photo = tk.PhotoImage(file="test2.png")
-        self.Artwork = tk.Label(self.master, image=self.photo)
-        self.Artwork.photo = self.photo
-        self.Artwork.pack()
+        self.photo = tk.PhotoImage(file="p1-photo title 12 LcdD.png")
+        self.Artwork1 = tk.Label(self.master, image=self.photo)
+        self.Artwork1.photo = self.photo
+        self.Artwork1.pack()
+        
+        self.photo = tk.PhotoImage(file="p2-photo title 12 LcdD.png")
+        self.Artwork2 = tk.Label(self.master, image=self.photo)
+        self.Artwork2.photo = self.photo
+        self.Artwork2.pack()
         #picture at the top
         '''
+        self.Label_psw_requirement = tk.Label(self.master, text = "Note: The length of password should be at least 6!", font=('Helvetica', 12))
         self.Label_name = tk.Label(self.master,text="Username:", font=('Helvetica', 12))
         self.Label_psw = tk.Label(self.master, text = "Password:", font=('Helvetica', 12))
         self.Label_psw_confirm = tk.Label(self.master, text = "Confirm your password:", font=('Helvetica', 12))
@@ -49,7 +55,7 @@ class Register_UI(tk.Frame):
         
         self.clickButton_fine = tk.Button(self.master, text = "Submit", font=('Helvetica', 12), command = self.finish)
         #submission button
-
+        self.Label_psw_requirement.place(x = 53, y = 160, width = 400, height = 30)
         self.Label_name.place(x = 50, y = 200, width = 100, height = 30)        
         self.entry_name.place(x = 150, y = 200, width = 100, height = 30)
         self.Label_psw.place(x = 50, y = 240, width = 100, height = 30)
@@ -97,7 +103,6 @@ def register_submit():
         close_reg_window()
     elif result == "1":
         mbox.showerror("Error", "This username is registered.")
-#=============================test code========================================
 if __name__ == "__main__":
     reg_window = Register_UI(close_reg_window, register_submit, close_reg_window)
     reg_window.show()
